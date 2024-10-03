@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto Play Music</title>
+</head>
+<body>
+    <audio id="audio" src="audio/Music.mp3" autoplay></audio>
+    <button id="toggleBtn">Pause</button>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const toggleBtn = document.getElementById('toggleBtn');
+
+        toggleBtn.onclick = function() {
+            if (audio.paused) {
+                audio.play();
+                toggleBtn.textContent = 'Pause';
+            } else {
+                audio.pause();
+                toggleBtn.textContent = 'Play';
+            }
+        };
+    </script>
+</body>
+</html>
